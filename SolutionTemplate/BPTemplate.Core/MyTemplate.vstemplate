@@ -1,0 +1,50 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>BasePoint.Core project</Name>
+    <Description>Project template with domain and application layers and abstractions of the other layers</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ModuleName.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>    
+	<CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="BPTemplate.Core.csproj" File="BPTemplate.Core.csproj" ReplaceParameters="true">
+      <Folder Name="Application" TargetFolderName="Application">
+        <Folder Name="Dtos" TargetFolderName="Dtos">
+          <Folder Name="Validators" TargetFolderName="Validators" />
+        </Folder>
+		<Folder Name="Cqrs" TargetFolderName="Cqrs">        
+          <Folder Name="QueryProviders" TargetFolderName="QueryProviders" />
+        </Folder>
+        <Folder Name="UseCases" TargetFolderName="UseCases" />
+      </Folder>
+      <Folder Name="Shared" TargetFolderName="Shared">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SharedConstants.cs">SharedConstants.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Configurations" TargetFolderName="Configurations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtentions.cs">ServiceCollectionExtentions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Domain" TargetFolderName="Domain">
+        <Folder Name="Cqrs" TargetFolderName="Cqrs">
+          <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />          
+        </Folder>
+        <Folder Name="Enumerators" TargetFolderName="Enumerators" />
+        <Folder Name="Entities" TargetFolderName="Entities">
+          <Folder Name="Interfaces" TargetFolderName="Interfaces" />
+        </Folder>
+        <Folder Name="Repositories" TargetFolderName="Repositories">
+          <Folder Name="Interfaces" TargetFolderName="Interfaces" />
+        </Folder>
+      </Folder>
+      <Folder Name="Exceptions" TargetFolderName="Exceptions" />
+      <Folder Name="Extensions" TargetFolderName="Extensions" />
+    </Project>
+  </TemplateContent>
+</VSTemplate>

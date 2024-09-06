@@ -1,0 +1,35 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+	<Name>BPTemplate.Cqrs.Dapper project</Name>
+    <Description>Project template with query stack/command stack implementation using dapper</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ModuleName.Cqrs.Dapper</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+	<CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="BPTemplate.Cqrs.Dapper.csproj" File="BPTemplate.Cqrs.Dapper.csproj" ReplaceParameters="true">
+      <Folder Name="Configurations" TargetFolderName="Configurations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtentions.cs">ServiceCollectionExtentions.cs</ProjectItem>
+      </Folder>      
+      <Folder Name="Migrations" TargetFolderName="Migrations">
+        <Folder Name="SctructuralScripts" TargetFolderName="SctructuralScripts">
+          <ProjectItem ReplaceParameters="true" TargetFileName="20240430081200CreateTableScript.sql">20240430081200CreateTableScript.sql</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Migrations.cs">Migrations.cs</ProjectItem>
+      </Folder>
+      <Folder Name="TableDefinitions" TargetFolderName="TableDefinitions"/>
+	  <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />
+	  <Folder Name="QueryProviders" TargetFolderName="QueryProviders" />
+      <Folder Name="EntityCommands" TargetFolderName="EntityCommands" />
+      <Folder Name="Handlers" TargetFolderName="Handlers" />
+    </Project>
+  </TemplateContent>
+</VSTemplate>

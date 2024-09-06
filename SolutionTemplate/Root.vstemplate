@@ -1,0 +1,32 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+<TemplateData>
+    <Name>BasePoint solution</Name>
+    <Description>Template for generating a solution with DDD and clean architecture</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ModuleName</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>DDD_Solution_icon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+	<ProjectCollection>
+            <ProjectTemplateLink ProjectName="$projectname$.Core" CopyParameters="true">
+                BPTemplate.Core\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$projectname$.Core.Tests" CopyParameters="true">
+                BPTemplate.Core.Tests\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$projectname$.Cqrs.Dapper" CopyParameters="true">
+                BPTemplate.Cqrs.Dapper\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$projectname$.Presentation.AspNetCoreApi" CopyParameters="true">
+                BPTemplate.Presentation.AspNetCoreApi\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
